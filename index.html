@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>心智教育 · 完整知识体系</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0a0a0f;color:#e8e8f0;line-height:1.7}
+a{color:inherit;text-decoration:none}
+.sticky-nav{position:sticky;top:0;z-index:200;background:rgba(10,10,15,0.93);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 40px;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none}
+.sticky-nav::-webkit-scrollbar{display:none}
+.nav-brand{font-size:15px;font-weight:700;color:#c9a96e;padding:14px 16px 14px 0;white-space:nowrap;letter-spacing:3px;border-right:1px solid rgba(255,255,255,0.1);margin-right:4px;flex-shrink:0}
+.nav-link{display:inline-block;padding:14px 14px;font-size:13px;color:rgba(255,255,255,0.6);white-space:nowrap;transition:color 0.2s;cursor:pointer}
+.nav-link:hover{color:#c9a96e}
+.hero{text-align:center;padding:100px 40px 80px;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(100,80,200,0.18) 0%,transparent 70%)}
+.hero-badge{display:inline-block;background:rgba(201,169,110,0.1);border:1px solid rgba(201,169,110,0.35);color:#c9a96e;padding:5px 18px;border-radius:50px;font-size:12px;letter-spacing:4px;margin-bottom:28px}
+.hero h1{font-size:52px;font-weight:900;letter-spacing:8px;color:#fff;margin-bottom:16px;text-shadow:0 0 40px rgba(150,120,255,0.3)}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.45);letter-spacing:6px;margin-bottom:60px}
+.hero-stats{display:flex;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.stat-item{flex:1;min-width:180px;padding:28px 20px;border:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.03);text-align:center}
+.stat-item:nth-child(2n){border-left:none}
+.stat-num{font-size:46px;font-weight:900;color:#c9a96e;line-height:1;margin-bottom:6px}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.45);letter-spacing:3px}
+.section{max-width:1100px;margin:0 auto;padding:80px 40px}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:30px;font-weight:700;color:#fff;letter-spacing:4px;margin-bottom:8px}
+.section-title .h2-cn{display:block;font-size:14px;color:#c9a96e;letter-spacing:2px;font-weight:400;margin-bottom:8px}
+.section-title p{font-size:13px;color:rgba(255,255,255,0.38);letter-spacing:2px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery-item{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;cursor:pointer;background:#1a1a2e;transition:transform 0.25s,box-shadow 0.25s}
+.gallery-item:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(100,80,200,0.25)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-overlay{position:absolute;bottom:0;left:0;right:0;padding:20px 14px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));font-size:12px;color:rgba(255,255,255,0.8);letter-spacing:1px}
+.emotion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.emotion-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px 20px;text-align:center;transition:border-color 0.3s,background 0.3s}
+.emotion-card:hover{border-color:rgba(201,169,110,0.4);background:rgba(201,169,110,0.05)}
+.emotion-icon{font-size:42px;margin-bottom:12px;display:block}
+.emotion-name{font-size:22px;font-weight:700;color:#fff;margin-bottom:4px}
+.emotion-organ{font-size:13px;color:#c9a96e;letter-spacing:2px}
+.emotion-desc{font-size:12px;color:rgba(255,255,255,0.42);margin-top:10px;line-height:1.7}
+.dna-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dna-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s}
+.dna-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(100,80,200,0.18)}
+.dna-header{padding:20px 20px 14px;display:flex;align-items:center;gap:12px}
+.dna-num{width:36px;height:36px;border-radius:50%;background:rgba(201,169,110,0.15);border:1px solid rgba(201,169,110,0.4);color:#c9a96e;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dna-title{font-size:17px;font-weight:700;color:#fff}
+.dna-body{padding:0 20px 20px}
+.dna-desc{font-size:13px;color:rgba(255,255,255,0.52);line-height:1.7}
+.dna-tag{display:inline-block;background:rgba(100,80,200,0.15);border:1px solid rgba(100,80,200,0.3);color:rgba(180,160,255,0.8);padding:3px 10px;border-radius:50px;font-size:11px;margin-top:12px;letter-spacing:1px}
+.heuristic-table{border-collapse:collapse;width:100%}
+.heuristic-table th{background:rgba(201,169,110,0.1);border:1px solid rgba(255,255,255,0.07);padding:14px 20px;text-align:left;font-size:11px;color:#c9a96e;letter-spacing:3px;font-weight:600}
+.heuristic-table td{border:1px solid rgba(255,255,255,0.05);padding:16px 20px;font-size:14px;color:rgba(255,255,255,0.72)}
+.heuristic-table tr:nth-child(even) td{background:rgba(255,255,255,0.02)}
+.heuristic-table tr:hover td{background:rgba(100,80,200,0.07)}
+.h-num{display:inline-block;width:26px;height:26px;border-radius:50%;background:rgba(201,169,110,0.2);border:1px solid rgba(201,169,110,0.4);color:#c9a96e;font-size:12px;font-weight:700;text-align:center;line-height:26px;margin-right:10px}
+.h-title{color:#fff;font-weight:600}
+.healing-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.healing-step{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:30px 22px;text-align:center;position:relative}
+.healing-step::after{content:"\2192";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:rgba(201,169,110,0.35);font-size:20px}
+.healing-step:last-child::after{display:none}
+.step-num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,rgba(201,169,110,0.3),rgba(150,120,255,0.3));border:1px solid rgba(201,169,110,0.5);color:#c9a96e;font-size:18px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:6px}
+.step-sub{font-size:11px;color:#c9a96e;letter-spacing:2px;margin-bottom:12px}
+.step-desc{font-size:13px;color:rgba(255,255,255,0.48);line-height:1.7}
+#lightbox{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;flex-direction:column}
+#lightbox.active{display:flex}
+#lightbox-img{max-width:92vw;max-height:86vh;border-radius:10px;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,0.5)}
+#lightbox-close{position:absolute;top:24px;right:28px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:28px;width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;line-height:1}
+#lightbox-close:hover{background:rgba(255,255,255,0.2)}
+#lightbox-caption{margin-top:16px;font-size:13px;color:rgba(255,255,255,0.45);letter-spacing:2px}
+.scroll-top{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:rgba(201,169,110,0.15);border:1px solid rgba(201,169,110,0.4);color:#c9a96e;font-size:22px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:300;transition:background 0.2s,transform 0.2s}
+.scroll-top.visible{display:flex}
+.scroll-top:hover{background:rgba(201,169,110,0.3);transform:translateY(-3px)}
+footer{text-align:center;padding:40px;border-top:1px solid rgba(255,255,255,0.06);font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:2px;background:#080810}
+footer strong{color:rgba(201,169,110,0.55)}
+#formula{background:#0d0d18}
+.formula-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.formula-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 22px;text-align:center;transition:transform 0.25s,border-color 0.25s}
+.formula-card:hover{transform:translateY(-4px);border-color:rgba(201,169,110,0.3)}
+.formula-icon{font-size:48px;margin-bottom:14px;display:block}
+.formula-name{font-size:19px;font-weight:700;color:#fff;margin-bottom:4px}
+.formula-sub{font-size:12px;color:#c9a96e;letter-spacing:2px;margin-bottom:12px}
+.formula-desc{font-size:13px;color:rgba(255,255,255,0.48);line-height:1.7}
+.flow-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.flow-node{flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px;text-align:center}
+.flow-node.highlight{border-color:rgba(201,169,110,0.4);background:rgba(201,169,110,0.05)}
+.flow-node-title{font-size:17px;font-weight:700;color:#fff;margin-bottom:4px}
+.flow-node-sub{font-size:11px;color:#c9a96e;letter-spacing:2px}
+.flow-node-sub-alt{font-size:12px;color:rgba(255,255,255,0.4);margin-top:8px}
+.flow-node.highlight .flow-node-sub-alt{color:#c9a96e}
+.flow-arrow{font-size:22px;color:rgba(201,169,110,0.35);flex-shrink:0}
+#emotion{background:#0a0a0f}#dna{background:#0d0d18}#system{background:#0a0a0f}#healing{background:#0d0d18}#tool{background:#0a0a0f}
+@media(max-width:768px){
+.gallery-grid{grid-template-columns:repeat(2,1fr)}
+.emotion-grid,.dna-grid{grid-template-columns:repeat(2,1fr)}
+.healing-steps{grid-template-columns:repeat(2,1fr)}
+.healing-step::after{display:none}
+.formula-cards{grid-template-columns:1fr}
+.hero h1{font-size:36px}
+.stat-num{font-size:36px}
+.flow-row{flex-direction:column}
+.flow-arrow{transform:rotate(90deg)}
+.sticky-nav{padding:0 20px}
+.section{padding:60px 20px}
+}
+@media(max-width:480px){
+.emotion-grid,.dna-grid,.healing-steps,.formula-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <span class="nav-brand">心智教育</span>
+  <a class="nav-link" href="#formula">心法公式</a>
+  <a class="nav-link" href="#gallery">高清大图</a>
+  <a class="nav-link" href="#system">能量层级</a>
+  <a class="nav-link" href="#healing">疗愈流程</a>
+  <a class="nav-link" href="#emotion">情绪对照</a>
+  <a class="nav-link" href="#dna">心智模型</a>
+  <a class="nav-link" href="#tool">决策启发式</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">包丰源心智教育体系</div>
+  <h1>心智教育</h1>
+  <p class="hero-sub">从根源理解生命能量 &middot; 重塑心灵与身体链接</p>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="stat-num">18</div><div class="stat-label">本著作</div></div>
+    <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">心智模型</div></div>
+    <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">决策启发式</div></div>
+    <div class="stat-item"><div class="stat-num">20+</div><div class="stat-label">年实践经验</div></div>
+  </div>
+</section>
+
+<section class="section" id="formula">
+  <div class="section-title"><h2>心法公式</h2><span class="h2-cn">CORE FORMULA</span><p>情绪是身体发出的信号，心智教育帮助你读懂它</p></div>
+  <div class="formula-cards">
+    <div class="formula-card"><span class="formula-icon">&#x1F9D0;</span><div class="formula-name">情绪&#x2192;身体</div><div class="formula-sub">能量映射</div><div class="formula-desc">每种情绪都对应特定身体器官与能量通道。恐惧伤肾、愤怒伤肝、悲伤伤肺——读懂情绪信号，才能从根本上疗愈身体。</div></div>
+    <div class="formula-card"><span class="formula-icon">&#x1F48E;</span><div class="formula-name">早经历&#x2192;心智模式</div><div class="formula-sub">根源追溯</div><div class="formula-desc">成年后的重复困境，往往源自早年经历形成的深层心智程序。找到那个"种子"，才能斩断轮回的链条。</div></div>
+    <div class="formula-card"><span class="formula-icon">&#x1F331;</span><div class="formula-name">看见&#x2192;接纳&#x2192;转化</div><div class="formula-sub">成长三阶</div><div class="formula-desc">先看见内心被压抑的情绪，接纳它的存在与价值，然后在当下做出新的选择。心智教育不是消除情绪，而是与情绪和解。</div></div>
+    <div class="formula-card"><span class="formula-icon">&#x1F517;</span><div class="formula-name">关系&#x2192;镜像</div><div class="formula-sub">投射原理</div><div class="formula-desc">你与外界的关系，映射着你与自己的关系。亲子、伴侣、财富、健康——一切外在障碍，皆是内在心智模式的显化。</div></div>
+    <div class="formula-card"><span class="formula-icon">&#x26A1;</span><div class="formula-name">能量&#x2192;频率</div><div class="formula-sub">共振法则</div><div class="formula-desc">同类能量相互吸引。你的内在频率决定了你吸引什么样的事件与人。提升心性频率，生命自然跃迁。</div></div>
+    <div class="formula-card"><span class="formula-icon">&#x1F56F;</span><div class="formula-name">敬天爱人</div><div class="formula-sub">终极心法</div><div class="formula-desc">去除内心障碍，多为他人创造价值。当你真正放下自我，服务众生，宇宙的能量自然会流向你。</div></div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="section-title"><h2>高清大图</h2><span class="h2-cn">VISUAL ARCHIVES</span><p>点击图片放大查看 &middot; 深入理解心智能量体系</p></div>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src,'情绪与五脏能量映射图')"><img src="https://www.yzmsxy.com/Upload/20240407173230hicm.jpg" alt="心智教育图谱" loading="lazy"><div class="gallery-overlay">情绪与五脏能量映射</div></div>
+    <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src,'心智程序层级模型')"><img src="https://pic2.zhimg.com/v2-c3cb97bc1a55098a49d2690230cc3073_1440w.jpg" alt="心智程序层级" loading="lazy"><div class="gallery-overlay">心智程序层级模型</div></div>
+    <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src,'原理能量层级结构')"><img src="https://www.madewill.com/wp-content/uploads/2021/01/%E5%BF%83%E7%90%86%E8%83%BD%E9%87%8F%E5%B1%82%E7%BA%A7.jpg" alt="原理能量层级" loading="lazy"><div class="gallery-overlay">原理能量层级结构</div></div>
+    <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src,'心智教育系统全图')"><img src="https://bpic.588ku.com/illus_list_pic/25/06/04/cb4e7d286c48e85e1d033d42d7bb3076.jpg" alt="心智教育系统" loading="lazy"><div class="gallery-overlay">心智教育系统全图</div></div>
+    <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src,'情绪管理与身心健康')"><img src="https://ossimg.xinli001.com/20230324/d57293bfdf87f9bd586741b51e81a008.jpeg" alt="情绪管理" loading="lazy"><div class="gallery-overlay">情绪管理与身心健康</div></div>
+    <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src,'生命觉醒与能量升维')"><img src="https://pic.rmb.bdstatic.com/bjh/news/cedc675e58332ada82c2561753251d1b.png" alt="生命觉醒" loading="lazy"><div class="gallery-overlay">生命觉醒与能量升维</div></div>
+  </div>
+</section>
+
+<section class="section" id="system">
+  <div class="section-title"><h2>能量层级</h2><span class="h2-cn">ENERGY LAYER SYSTEM</span><p>从低维到高维，心智能量决定了生命的质量</p></div>
+  <div class="flow-row">
+    <div class="flow-node"><div class="flow-node-title">身体层</div><div class="flow-node-sub">PHYSICAL</div><div class="flow-node-sub-alt">物质基础 &middot; 健康与活力</div></div>
+    <div class="flow-arrow">&#x2192;</div>
+    <div class="flow-node"><div class="flow-node-title">情绪层</div><div class="flow-node-sub">EMOTIONAL</div><div class="flow-node-sub-alt">感受流动 &middot; 与情绪和解</div></div>
+    <div class="flow-arrow">&#x2192;</div>
+    <div class="flow-node"><div class="flow-node-title">心智层</div><div class="flow-node-sub">MENTAL</div><div class="flow-node-sub-alt">信念程序 &middot; 重塑思维模式</div></div>
+  </div>
+  <div class="flow-row">
+    <div class="flow-node"><div class="flow-node-title">关系层</div><div class="flow-node-sub">RELATIONAL</div><div class="flow-node-sub-alt">镜像映射 &middot; 和解他人与自我</div></div>
+    <div class="flow-arrow">&#x2192;</div>
+    <div class="flow-node highlight"><div class="flow-node-title">灵性层</div><div class="flow-node-sub">SPIRITUAL</div><div class="flow-node-sub-alt">使命觉醒 &middot; 与道合一</div></div>
+    <div class="flow-arrow">&#x2192;</div>
+    <div class="flow-node"><div class="flow-node-title">道法层</div><div class="flow-node-sub">COSMIC</div><div class="flow-node-sub-alt">合道而行 &middot; 万物归一</div></div>
+  </div>
+</section>
+
+<section class="section" id="healing">
+  <div class="section-title"><h2>疗愈流程</h2><span class="h2-cn">HEALING JOURNEY</span><p>四步走，从觉察到觉醒，重塑生命能量</p></div>
+  <div class="healing-steps">
+    <div class="healing-step"><div class="step-num">&#x2460;</div><div class="step-title">觉察情绪</div><div class="step-sub">AWARENESS</div><div class="step-desc">在当下觉察身体的感受与情绪反应，命名它、承认它。当情绪被命名，它的控制力就开始减弱。</div></div>
+    <div class="healing-step"><div class="step-num">&#x2461;</div><div class="step-title">追溯根源</div><div class="step-sub">TRACING</div><div class="step-desc">回溯早年经历，找到形成这个情绪模式的"种子事件"。不是责怪过去，而是理解它的来龙去脉。</div></div>
+    <div class="healing-step"><div class="step-num">&#x2462;</div><div class="step-title">接纳与和解</div><div class="step-sub">ACCEPTANCE</div><div class="step-desc">接纳过去的发生，接纳当时年幼的自己。宽恕他人，也宽恕自己。让压抑的能量流动、释放。</div></div>
+    <div class="healing-step"><div class="step-num">&#x2463;</div><div class="step-title">更新选择</div><div class="step-sub">RENEWAL</div><div class="step-desc">在当下做出新的选择。建立新的心智程序，用更高维的视角面对曾经的困境，创造全新的人生剧本。</div></div>
+  </div>
+</section>
+
+<section class="section" id="emotion">
+  <div class="section-title"><h2>情绪对照</h2><span class="h2-cn">EMOTION MAPPING</span><p>每种情绪都是身体发出的信号，藏着生命的答案</p></div>
+  <div class="emotion-grid">
+    <div class="emotion-card"><span class="emotion-icon">&#x1F628;</span><div class="emotion-name">恐惧</div><div class="emotion-organ">&#x2192; 肾</div><div class="emotion-desc">恐惧对应肾脏，肾主恐。长期恐惧消耗肾气，导致腰膝酸软、脱发、尿频等问题。恐惧背后是匮乏感与不安全感。</div></div>
+    <div class="emotion-card"><span class="emotion-icon">&#x1F621;</span><div class="emotion-name">愤怒</div><div class="emotion-organ">&#x2192; 肝</div><div class="emotion-desc">愤怒对应肝脏，肝主怒。愤怒积压伤肝，导致偏头痛、乳腺增生、甲状腺问题。愤怒背后是不被尊重或需求未满足。</div></div>
+    <div class="emotion-card"><span class="emotion-icon">&#x1F622;</span><div class="emotion-name">悲伤</div><div class="emotion-organ">&#x2192; 肺</div><div class="emotion-desc">悲伤对应肺脏，肺主悲。长期悲伤耗伤肺气，导致气短、咳嗽、皮肤干燥。悲伤背后是对失去的执着或未被表达的爱。</div></div>
+    <div class="emotion-card"><span class="emotion-icon">&#x1F630;</span><div class="emotion-name">焦虑</div><div class="emotion-organ">&#x2192; 脾</div><div class="emotion-desc">焦虑对应脾脏，脾主思。焦虑过度伤脾，导致消化不良、腹胀、倦怠。焦虑背后是对未来的失控感与完美主义。</div></div>
+    <div class="emotion-card"><span class="emotion-icon">&#x1F494;</span><div class="emotion-name">怨恨</div><div class="emotion-organ">&#x2192; 心</div><div class="emotion-desc">怨恨对应心脏，心主喜。怨恨积聚伤心，导致心悸、失眠、血瘀。怨恨背后是受伤感与对他人期待的落空。</div></div>
+    <div class="emotion-card"><span class="emotion-icon">&#x1F614;</span><div class="emotion-name">内疚</div><div class="emotion-organ">&#x2192; 全身</div><div class="emotion-desc">内疚是最具破坏性的情绪之一，消耗全身能量。长期内疚伤及脏腑，引发自身免疫性疾病。内疚背后是未完成的承诺或对自己过高的道德要求。</div></div>
+  </div>
+</section>
+
+<section class="section" id="dna">
+  <div class="section-title"><h2>心智模型</h2><span class="h2-cn">MENTAL DNA</span><p>六大核心心智模型，塑造你的人生脚本</p></div>
+  <div class="dna-grid">
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">1</div><div class="dna-title">情绪映射模型</div></div><div class="dna-body"><div class="dna-desc">每种情绪都对应一个身体器官与一条能量通道。情绪不是敌人，而是信使。当你能读懂情绪背后的身体语言，就能从根本上疗愈自己。身体是内心的一面镜子。</div><div class="dna-tag">核心基础</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">2</div><div class="dna-title">早经历种子模型</div></div><div class="dna-body"><div class="dna-desc">成年后在关系、财富、健康中的重复困境，是早年经历在你心智中播下的"种子"在发挥作用。不是命运，是程序。识别并转化这个种子，才能斩断轮回。</div><div class="dna-tag">根源追溯</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">3</div><div class="dna-title">关系镜像模型</div></div><div class="dna-body"><div class="dna-desc">你与父母、伴侣、孩子、合作伙伴的关系，都是你与自己内在关系的投射。外在世界是你内在心智的镜像。要改变外在关系，先和解内在关系。</div><div class="dna-tag">关系洞察</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">4</div><div class="dna-title">能量共振模型</div></div><div class="dna-body"><div class="dna-desc">同类能量相互吸引。你生命中的一切——财富、情感、健康、机会——都是被你内在能量频率吸引而来。提升自己的能量频率，生命自然会向你呈现更好的版本。</div><div class="dna-tag">吸引力法则</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">5</div><div class="dna-title">敬天爱人模型</div></div><div class="dna-body"><div class="dna-desc">当你真正放下自我中心，愿意为他人创造价值，宇宙的能量自然会流向你。多为别人创造价值，自己自然会变得富足。给予是获得的最快路径。</div><div class="dna-tag">终极心法</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">6</div><div class="dna-title">去除障碍模型</div></div><div class="dna-body"><div class="dna-desc">人生中的一切困境，根源都在于内心的障碍——压抑的情绪、未和解的关系、限制性的信念。去除这些障碍，让能量自由流动，生命自然展开它本来的丰盛。</div><div class="dna-tag">转化核心</div></div></div>
+  </div>
+</section>
+
+<section class="section" id="tool">
+  <div class="section-title"><h2>决策启发式</h2><span class="h2-cn">DECISION HEURISTICS</span><p>八条心智教育核心原则，帮你做出更高维的选择</p></div>
+  <table class="heuristic-table">
+    <thead><tr><th style="width:60px">#</th><th>启发式</th><th>核心含义</th></tr></thead>
+    <tbody>
+      <tr><td><span class="h-num">1</span></td><td class="h-title">先处理情绪，再解决问题</td><td>情绪未平，理性不现。任何决策都在情绪激动时做出的选择，都可能成为未来的坑。先让情绪流过，再做决定。</td></tr>
+      <tr><td><span class="h-num">2</span></td><td class="h-title">追溯早经历，看见程序</td><td>当下的问题，往往是旧程序的回响。每当遇到类似的困境，问自己：这个问题以前在哪里见过？那时发生了什么？找到种子，就能转化。</td></tr>
+      <tr><td><span class="h-num">3</span></td><td class="h-title">关系是镜子，一切向内看</td><td>当你对某人有强烈情绪反应，那面镜子照出的是你自己的内在。无论亲近还是讨厌，都是认识自己的机会。</td></tr>
+      <tr><td><span class="h-num">4</span></td><td class="h-title">身体是答案，倾听信号</td><td>身体知道一切。每一次不适、每一次疼痛、每一次莫名的疲惫，都是内心在试图告诉你什么。学会聆听身体。</td></tr>
+      <tr><td><span class="h-num">5</span></td><td class="h-title">提升能量，吸引美好</td><td>当你处于高频状态，你会自然吸引更好的人、更好的机会、更好的结果。投资自己的心性成长，是回报率最高的决策。</td></tr>
+      <tr><td><span class="h-num">6</span></td><td class="h-title">给予就是获得，服务即财富</td><td>每一份真正的给予，都会在某处以某种形式回流。不要计较一时一地，放大你的给予，你会发现自己越来越富足。</td></tr>
+      <tr><td><span class="h-num">7</span></td><td class="h-title">去除障碍，让能量流动</td><td>生命不需要添加更多，只需要减少阻碍。那些让你卡住的——恐惧、愤怒、内疚、怨恨——都是可以转化和释放的。</td></tr>
+      <tr><td><span class="h-num">8</span></td><td class="h-title">敬天爱人，合道而行</td><td>当你不只是为了自己，当你的行动服务于更大的善，宇宙会回应你。以敬天爱人为准则，所有的选择都不会错。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+<section class="section" id="credits">
+  <div class="section-title"><h2>延伸阅读</h2><span class="h2-cn">EXTENDED READING</span><p>包丰源老师核心著作与课程推荐</p></div>
+  <div class="dna-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">1</div><div class="dna-title">《心智的力量》</div></div><div class="dna-body"><div class="dna-desc">心智教育的奠基之作，系统阐述了情绪与身体、关系、财富之间的内在联系。从根源揭示人生困境的成因，并提供转化的路径与方法。</div><div class="dna-tag">代表作</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">2</div><div class="dna-title">《情绪疗愈》</div></div><div class="dna-body"><div class="dna-desc">深入解析六种核心情绪与五脏的对应关系，提供系统的自我觉察与疗愈工具。帮助读者从情绪的奴隶转变为情绪的主人。</div><div class="dna-tag">疗愈指南</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">3</div><div class="dna-title">《种子法则》</div></div><div class="dna-body"><div class="dna-desc">揭示早年经历如何塑造成年心智模式，以及如何通过识别和转化"种子"来改变人生剧本。从知道到做到的完整路径。</div><div class="dna-tag">核心方法</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">4</div><div class="dna-title">《关系镜子》</div></div><div class="dna-body"><div class="dna-desc">从亲子关系到亲密关系，从财富关系到健康关系——一切外在关系都是内在心智的镜像。学会用镜子照见自己，生命从此不同。</div><div class="dna-tag">关系指南</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">5</div><div class="dna-title">《敬天爱人》</div></div><div class="dna-body"><div class="dna-desc">心智教育的终极心法。当一个人真正理解"敬天爱人"的含义并付诸实践，所有的内在障碍都会消融，生命进入全然敞开的状态。</div><div class="dna-tag">终极心法</div></div></div>
+    <div class="dna-card"><div class="dna-header"><div class="dna-num">6</div><div class="dna-title">线下课程体系</div></div><div class="dna-body"><div class="dna-desc">心智教育研修班、种子法则工作坊、疗愈师认证课程。从个人成长到专业助人，构建完整的心智教育实践体系。</div><div class="dna-tag">课程体系</div></div></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-title"><h2>关于心智教育</h2><span class="h2-cn">ABOUT MINZXIN EDUCATION</span><p>什么是心智教育？为什么它能改变人生？</p></div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:40px;max-width:800px;margin:0 auto">
+    <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:2;margin-bottom:20px">心智教育，是研究人类心智运作规律与身心健康的交叉学科。它不治病，但通过改变引发疾病的内在心智模式，让身体自愈成为可能。</p>
+    <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:2;margin-bottom:20px">传统医学治标，心智教育治本。当一个人真正理解"我是一切的根源"，并开始在内在下功夫，外在的一切——关系、财富、健康——都会随之改变。</p>
+    <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:2">这不是玄学，而是有大量临床案例支撑的实证学科。包丰源老师用20余年时间，访问了数万名患者与学员，验证了心智模式与身体疾病之间的高度相关性，并在国内外出版了18本专著，惠及数十万学员。</p>
+  </div>
+</section>
+
+<div id="lightbox">
+  <img id="lightbox-img" src="" alt="">
+  <button id="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <div id="lightbox-caption"></div>
+</div>
+
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+
+<footer>
+  <p>心智教育知识体系 &nbsp;|&nbsp; 基于包丰源老师18年研究与实践 &nbsp;|&nbsp; <strong>道虾整理</strong>
+<script>
+function openLightbox(src, caption){
+  var lb = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+  var cap = document.getElementById('lightbox-caption');
+  img.src = src;
+  cap.textContent = caption || '';
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  var lb = document.getElementById('lightbox');
+  lb.classList.remove('active');
+  document.body.style.overflow = '';
+  document.getElementById('lightbox-img').src = '';
+}
+document.getElementById('lightbox').addEventListener('click', function(e){
+  if(e.target === this) closeLightbox();
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeLightbox();
+});
+window.addEventListener('scroll', function(){
+  var btn = document.getElementById('scrollTopBtn');
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+</body>
+</html>
