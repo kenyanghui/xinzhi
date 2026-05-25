@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>心智教育 · 完整知识体系</title>
+<title>心智教育 · 包丰源完整知识体系</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0a0a0f;color:#e8e8f0;line-height:1.7}
@@ -17,8 +17,8 @@ a{color:inherit;text-decoration:none}
 .hero-badge{display:inline-block;background:rgba(201,169,110,0.1);border:1px solid rgba(201,169,110,0.35);color:#c9a96e;padding:5px 18px;border-radius:50px;font-size:12px;letter-spacing:4px;margin-bottom:28px}
 .hero h1{font-size:52px;font-weight:900;letter-spacing:8px;color:#fff;margin-bottom:16px;text-shadow:0 0 40px rgba(150,120,255,0.3)}
 .hero-sub{font-size:15px;color:rgba(255,255,255,0.45);letter-spacing:6px;margin-bottom:60px}
-.hero-stats{display:flex;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto}
-.stat-item{flex:1;min-width:180px;padding:28px 20px;border:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.03);text-align:center}
+.hero-stats{display:flex;justify-content:center;flex-wrap:wrap;max-width:1100px;margin:0 auto}
+.stat-item{flex:1;min-width:150px;padding:28px 20px;border:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.03);text-align:center}
 .stat-item:nth-child(2n){border-left:none}
 .stat-num{font-size:46px;font-weight:900;color:#c9a96e;line-height:1;margin-bottom:6px}
 .stat-label{font-size:12px;color:rgba(255,255,255,0.45);letter-spacing:3px}
@@ -91,6 +91,53 @@ footer strong{color:rgba(201,169,110,0.55)}
 .flow-node.highlight .flow-node-sub-alt{color:#c9a96e}
 .flow-arrow{font-size:22px;color:rgba(201,169,110,0.35);flex-shrink:0}
 #emotion{background:#0a0a0f}#dna{background:#0d0d18}#system{background:#0a0a0f}#healing{background:#0d0d18}#tool{background:#0a0a0f}
+#books{background:#0d0d18}#timeline-sec{background:#0a0a0f}#honors{background:#0d0d18}#testimonials{background:#0a0a0f}#courses{background:#0d0d18}
+
+/* Book grid */
+.book-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.book-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:20px;text-align:center;transition:transform 0.25s,border-color 0.25s}
+.book-card:hover{transform:translateY(-4px);border-color:rgba(201,169,110,0.35)}
+.book-icon{font-size:36px;margin-bottom:8px;display:block}
+.book-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:2px;letter-spacing:2px}
+.book-sub{font-size:10px;color:#c9a96e;letter-spacing:2px}
+
+/* Timeline */
+.tl-list{position:relative;padding-left:40px;max-width:800px;margin:0 auto}
+.tl-list::before{content:"";position:absolute;left:16px;top:0;bottom:0;width:2px;background:rgba(201,169,110,0.25)}
+.tl-row{position:relative;margin-bottom:28px;padding-left:20px}
+.tl-dot{position:absolute;left:-34px;top:4px;width:14px;height:14px;border-radius:50%;background:#0d0d18;border:2px solid #c9a96e;z-index:1}
+.tl-row.highlight .tl-dot{background:#c9a96e;box-shadow:0 0 12px rgba(201,169,110,0.4)}
+.tl-year{font-size:13px;font-weight:700;color:#c9a96e;letter-spacing:2px;margin-bottom:2px}
+.tl-content{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6}
+.tl-content strong{color:#fff}
+
+/* Honor / achievement cards */
+.honor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.honor-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px 22px;text-align:center;transition:border-color 0.3s}
+.honor-item:hover{border-color:rgba(201,169,110,0.35)}
+.honor-icon{font-size:38px;margin-bottom:12px;display:block}
+.honor-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+.honor-sub{font-size:11px;color:#c9a96e;letter-spacing:2px;margin-bottom:10px}
+.honor-desc{font-size:12px;color:rgba(255,255,255,0.48);line-height:1.7}
+
+/* Testimonials */
+.testimonial-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.testimonial-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:28px 24px;transition:border-color 0.3s}
+.testimonial-card:hover{border-color:rgba(201,169,110,0.3)}
+.testimonial-text{font-size:14px;color:rgba(255,255,255,0.68);line-height:1.8;font-style:italic;margin-bottom:14px}
+.testimonial-text::before{content:"\201C";color:#c9a96e;font-size:24px;margin-right:4px}
+.testimonial-author{font-size:12px;color:#c9a96e;letter-spacing:1px}
+.testimonial-tag{display:inline-block;background:rgba(100,80,200,0.12);border:1px solid rgba(100,80,200,0.25);color:rgba(180,160,255,0.7);padding:2px 8px;border-radius:50px;font-size:10px;margin-top:8px;letter-spacing:1px}
+
+/* Course flow */
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.course-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:28px 22px;text-align:center;transition:transform 0.25s,border-color 0.25s}
+.course-card:hover{transform:translateY(-4px);border-color:rgba(201,169,110,0.35)}
+.course-num{width:40px;height:40px;border-radius:50%;background:rgba(201,169,110,0.15);border:1px solid rgba(201,169,110,0.4);color:#c9a96e;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.course-title{font-size:17px;font-weight:700;color:#fff;margin-bottom:4px}
+.course-sub{font-size:11px;color:#c9a96e;letter-spacing:2px;margin-bottom:10px}
+.course-desc{font-size:12px;color:rgba(255,255,255,0.48);line-height:1.7}
+
 @media(max-width:768px){
 .gallery-grid{grid-template-columns:repeat(2,1fr)}
 .emotion-grid,.dna-grid{grid-template-columns:repeat(2,1fr)}
@@ -103,9 +150,13 @@ footer strong{color:rgba(201,169,110,0.55)}
 .flow-arrow{transform:rotate(90deg)}
 .sticky-nav{padding:0 20px}
 .section{padding:60px 20px}
+.book-grid{grid-template-columns:repeat(2,1fr)}
+.honor-grid{grid-template-columns:repeat(2,1fr)}
+.testimonial-grid{grid-template-columns:1fr}
+.course-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:480px){
-.emotion-grid,.dna-grid,.healing-steps,.formula-cards{grid-template-columns:1fr}
+.emotion-grid,.dna-grid,.healing-steps,.formula-cards,.book-grid,.honor-grid,.course-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -120,6 +171,11 @@ footer strong{color:rgba(201,169,110,0.55)}
   <a class="nav-link" href="#emotion">情绪对照</a>
   <a class="nav-link" href="#dna">心智模型</a>
   <a class="nav-link" href="#tool">决策启发式</a>
+  <a class="nav-link" href="#books">18本著作</a>
+  <a class="nav-link" href="#timeline-sec">发展历程</a>
+  <a class="nav-link" href="#honors">学术成就</a>
+  <a class="nav-link" href="#testimonials">学员见证</a>
+  <a class="nav-link" href="#courses">课程体系</a>
 </nav>
 
 <section class="hero">
@@ -128,9 +184,11 @@ footer strong{color:rgba(201,169,110,0.55)}
   <p class="hero-sub">从根源理解生命能量 &middot; 重塑心灵与身体链接</p>
   <div class="hero-stats">
     <div class="stat-item"><div class="stat-num">18</div><div class="stat-label">本著作</div></div>
+    <div class="stat-item"><div class="stat-num">20+</div><div class="stat-label">年实践经验</div></div>
+    <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">学术论文</div></div>
+    <div class="stat-item"><div class="stat-num">9</div><div class="stat-label">心智家园小学</div></div>
     <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">心智模型</div></div>
     <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">决策启发式</div></div>
-    <div class="stat-item"><div class="stat-num">20+</div><div class="stat-label">年实践经验</div></div>
   </div>
 </section>
 
@@ -227,17 +285,88 @@ footer strong{color:rgba(201,169,110,0.55)}
   </table>
 </section>
 
+<section class="section" id="books">
+  <div class="section-title"><h2>18本著作</h2><span class="h2-cn">COMPLETE WORKS</span><p>包丰源老师20余年笔耕不辍，构建完整心智教育理论体系</p></div>
+  <div class="book-grid">
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《情志疗法》</div><div class="book-sub">理论体系奠基</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《心转病移》</div><div class="book-sub">思想转变疗愈</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《孩子的问题都是父母的问题》</div><div class="book-sub">亲子关系</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《用心带孩子》</div><div class="book-sub">父母智慧</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《成就孩子一生》</div><div class="book-sub">教育心智学</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《谁决定孩子的命运》</div><div class="book-sub">家族能量传承</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《系统赢天下》</div><div class="book-sub">组织修炼</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《永续发展》</div><div class="book-sub">生命可持续发展</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《用思想来改变一切》</div><div class="book-sub">思想创造现实</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《塑造中国形象》</div><div class="book-sub">国家心智形象</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《心智能量》</div><div class="book-sub">能量与心智</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《心智的力量》</div><div class="book-sub">心智力量体系</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《共振》</div><div class="book-sub">共振原理应用</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《今生相遇都是过往的重逢》</div><div class="book-sub">生命缘分</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《边走边悟》</div><div class="book-sub">人生感悟</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《不要拿过往的经历当资本》</div><div class="book-sub">突破局限</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《决胜右脑》</div><div class="book-sub">右脑开发</div></div>
+    <div class="book-card"><span class="book-icon">&#x1F4D6;</span><div class="book-title">《右脑制胜》</div><div class="book-sub">右脑思维</div></div>
+  </div>
 </section>
 
-<section class="section" id="credits">
-  <div class="section-title"><h2>延伸阅读</h2><span class="h2-cn">EXTENDED READING</span><p>包丰源老师核心著作与课程推荐</p></div>
-  <div class="dna-grid" style="grid-template-columns:repeat(3,1fr)">
-    <div class="dna-card"><div class="dna-header"><div class="dna-num">1</div><div class="dna-title">《心智的力量》</div></div><div class="dna-body"><div class="dna-desc">心智教育的奠基之作，系统阐述了情绪与身体、关系、财富之间的内在联系。从根源揭示人生困境的成因，并提供转化的路径与方法。</div><div class="dna-tag">代表作</div></div></div>
-    <div class="dna-card"><div class="dna-header"><div class="dna-num">2</div><div class="dna-title">《情绪疗愈》</div></div><div class="dna-body"><div class="dna-desc">深入解析六种核心情绪与五脏的对应关系，提供系统的自我觉察与疗愈工具。帮助读者从情绪的奴隶转变为情绪的主人。</div><div class="dna-tag">疗愈指南</div></div></div>
-    <div class="dna-card"><div class="dna-header"><div class="dna-num">3</div><div class="dna-title">《种子法则》</div></div><div class="dna-body"><div class="dna-desc">揭示早年经历如何塑造成年心智模式，以及如何通过识别和转化"种子"来改变人生剧本。从知道到做到的完整路径。</div><div class="dna-tag">核心方法</div></div></div>
-    <div class="dna-card"><div class="dna-header"><div class="dna-num">4</div><div class="dna-title">《关系镜子》</div></div><div class="dna-body"><div class="dna-desc">从亲子关系到亲密关系，从财富关系到健康关系——一切外在关系都是内在心智的镜像。学会用镜子照见自己，生命从此不同。</div><div class="dna-tag">关系指南</div></div></div>
-    <div class="dna-card"><div class="dna-header"><div class="dna-num">5</div><div class="dna-title">《敬天爱人》</div></div><div class="dna-body"><div class="dna-desc">心智教育的终极心法。当一个人真正理解"敬天爱人"的含义并付诸实践，所有的内在障碍都会消融，生命进入全然敞开的状态。</div><div class="dna-tag">终极心法</div></div></div>
-    <div class="dna-card"><div class="dna-header"><div class="dna-num">6</div><div class="dna-title">线下课程体系</div></div><div class="dna-body"><div class="dna-desc">心智教育研修班、种子法则工作坊、疗愈师认证课程。从个人成长到专业助人，构建完整的心智教育实践体系。</div><div class="dna-tag">课程体系</div></div></div>
+<section class="section" id="timeline-sec">
+  <div class="section-title"><h2>发展历程</h2><span class="h2-cn">MILESTONES</span><p>从2005年创立到2025年体系成熟，二十年深耕不辍</p></div>
+  <div class="tl-list">
+    <div class="tl-row highlight"><div class="tl-dot"></div><div class="tl-year">2005</div><div class="tl-content"><strong>创立心智家园文化发展有限公司</strong>，确立使命"让生命更有价值"，开始研发心智教育体系</div></div>
+    <div class="tl-row"><div class="tl-dot"></div><div class="tl-year">2005-2010</div><div class="tl-content">大量案例收集，理论初创期——<strong>文件包理论</strong>、唤醒法、呼吸法等核心技术雏形形成</div></div>
+    <div class="tl-row"><div class="tl-dot"></div><div class="tl-year">2010-2014</div><div class="tl-content">课程体系完善，多地区扩展，早期书籍出版，心智教育体系初步成型</div></div>
+    <div class="tl-row highlight"><div class="tl-dot"></div><div class="tl-year">2014</div><div class="tl-content"><strong>创立广东省心智家园慈善基金会</strong>，开始捐建心智家园小学，启动"中国太阳公益活动"</div></div>
+    <div class="tl-row highlight"><div class="tl-dot"></div><div class="tl-year">2016</div><div class="tl-content">论文《以乳腺增生为例探讨情绪与疾病的对应关系及心智疗法》发表，获<strong>《健康之路》一等奖</strong></div></div>
+    <div class="tl-row highlight"><div class="tl-dot"></div><div class="tl-year">2019</div><div class="tl-content">出版英文著作 <strong>《Emotional Release Therapy》</strong>，理论输出海外，开启国际化尝试</div></div>
+    <div class="tl-row highlight"><div class="tl-dot"></div><div class="tl-year">2021</div><div class="tl-content"><strong>科学技术成果评价：国际领先水平</strong>，学术地位正式确立</div></div>
+    <div class="tl-row highlight"><div class="tl-dot"></div><div class="tl-year">2022</div><div class="tl-content"><strong>《情志疗法操作规范》团体标准发布实施</strong>，获中国民族医药学会科学技术二等奖，专业标准化里程碑</div></div>
+    <div class="tl-row highlight"><div class="tl-dot"></div><div class="tl-year">2023</div><div class="tl-content"><strong>第二十一届中国科学家论坛</strong>，获评"中医情志疗法科技创新先锋人物"，学术地位达到新高度</div></div>
+    <div class="tl-row"><div class="tl-dot"></div><div class="tl-year">2024-2025</div><div class="tl-content">课程规模化发展，心转病移系列多期举办，学员来自全国各地及海外（美国、澳大利亚），与天空宽频董事长陈建成对话AI时代生存法则</div></div>
+  </div>
+</section>
+
+<section class="section" id="honors">
+  <div class="section-title"><h2>学术成就</h2><span class="h2-cn">ACADEMIC ACHIEVEMENTS</span><p>从论文发表到行业标准，从科技进步奖到国际领先评价</p></div>
+  <div class="honor-grid">
+    <div class="honor-item"><span class="honor-icon">&#x1F3C6;</span><div class="honor-title">国际领先水平</div><div class="honor-sub">2021</div><div class="honor-desc">情志疗法科学技术成果评价为<strong>国际领先水平</strong>，标志着该疗法在国际范围内的领先地位</div></div>
+    <div class="honor-item"><span class="honor-icon">&#x1F4DC;</span><div class="honor-title">团体标准发布</div><div class="honor-sub">2022</div><div class="honor-desc"><strong>《情志疗法操作规范》</strong>团体标准正式发布实施，行业规范化的关键一步</div></div>
+    <div class="honor-item"><span class="honor-icon">&#x1F3C5;</span><div class="honor-title">科学技术二等奖</div><div class="honor-sub">2022</div><div class="honor-desc">获<strong>中国民族医药学会科学技术二等奖</strong>，学术认可度持续提升</div></div>
+    <div class="honor-item"><span class="honor-icon">&#x1F31F;</span><div class="honor-title">科技创新先锋人物</div><div class="honor-sub">2023</div><div class="honor-desc">第二十一届中国科学家论坛获评<strong>"中医情志疗法科技创新先锋人物"</strong></div></div>
+    <div class="honor-item"><span class="honor-icon">&#x1F4DA;</span><div class="honor-title">核心论文</div><div class="honor-sub">多篇获奖</div><div class="honor-desc">论文发表于《健康之路》《世界最新医学信息文摘》等期刊，多篇获一等奖，SCI/EI期刊发表</div></div>
+    <div class="honor-item"><span class="honor-icon">&#x1F30D;</span><div class="honor-title">国际影响力</div><div class="honor-sub">全球拓展</div><div class="honor-desc">美国研究中心成立，世界中医药大会、世界心身医学大会发言，海外工作坊授课</div></div>
+  </div>
+  <div style="margin-top:30px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
+    <span class="dna-tag" style="font-size:12px">中国民族医药协会健康科普分会副会长</span>
+    <span class="dna-tag" style="font-size:12px">中国未来研究会教育分会副会长</span>
+    <span class="dna-tag" style="font-size:12px">华中科技大学中医学高职老师</span>
+    <span class="dna-tag" style="font-size:12px">世界医学气功学会常务理事</span>
+    <span class="dna-tag" style="font-size:12px">健康科普之星</span>
+  </div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="section-title"><h2>学员见证</h2><span class="h2-cn">TESTIMONIALS</span><p>数千学员的真实转变，是心智教育最好的证明</p></div>
+  <div class="testimonial-grid">
+    <div class="testimonial-card"><div class="testimonial-text">被腰痛问题困扰了16年，在课程中重获久违的轻松。</div><div class="testimonial-author">—— 学员分享</div><div class="testimonial-tag">身体疗愈</div></div>
+    <div class="testimonial-card"><div class="testimonial-text">13年的肩膀酸痛，在释放了承担过多的情绪后，完全消失。</div><div class="testimonial-author">—— 学员分享</div><div class="testimonial-tag">身体疗愈</div></div>
+    <div class="testimonial-card"><div class="testimonial-text">20年的癫痫不再发作。</div><div class="testimonial-author">—— 学员分享</div><div class="testimonial-tag">身体疗愈</div></div>
+    <div class="testimonial-card"><div class="testimonial-text">和老公在一起28年，第一次在娘家吃团年饭，以前我是提也不敢提的，现在居然实现了。</div><div class="testimonial-author">—— 学员分享</div><div class="testimonial-tag">关系修复</div></div>
+    <div class="testimonial-card"><div class="testimonial-text">走出儿时对母亲的埋怨与疏离，理解与感恩之情油然而生。</div><div class="testimonial-author">—— 学员分享</div><div class="testimonial-tag">关系修复</div></div>
+    <div class="testimonial-card"><div class="testimonial-text">以前我感觉自己很聪明，学习完课程后，我才发现自己的愚昧无知。这不仅是一次学习，更是一场深刻而健康的自我觉醒。</div><div class="testimonial-author">—— 骆鹭 · 南宁</div><div class="testimonial-tag">生命觉醒</div></div>
+    <div class="testimonial-card"><div class="testimonial-text">离婚的和准备离婚的夫妻重新牵手拥抱。</div><div class="testimonial-author">—— 学员分享</div><div class="testimonial-tag">关系修复</div></div>
+    <div class="testimonial-card"><div class="testimonial-text">我们不是在治病，是在来活明白的。</div><div class="testimonial-author">—— 学员转述</div><div class="testimonial-tag">生命觉醒</div></div>
+  </div>
+</section>
+
+<section class="section" id="courses">
+  <div class="section-title"><h2>课程体系</h2><span class="h2-cn">COURSE SYSTEM</span><p>从个人成长到专业助人，构建完整的心智教育实践体系</p></div>
+  <div class="course-grid">
+    <div class="course-card"><div class="course-num">01</div><div class="course-title">生命智慧</div><div class="course-sub">三阶体系</div><div class="course-desc">一阶认识内在、掌握规律；二阶穿越障碍、提升能量；三阶拥有智慧、敬天爱人。从入门到觉醒的完整路径。</div></div>
+    <div class="course-card"><div class="course-num">02</div><div class="course-title">心转病移</div><div class="course-sub">二阶体系</div><div class="course-desc">一阶处理"文件包"、情绪释放；二阶生命觉醒、思想维度提升。身体是思想的镜子，心转则病移。</div></div>
+    <div class="course-card"><div class="course-num">03</div><div class="course-title">情志疗法</div><div class="course-sub">专业技术</div><div class="course-desc">系统学习情志疗法的理论与操作规范，掌握释放、化解、清除情绪负荷的专业技术，成为合格的情志疗法 practitioner。</div></div>
+    <div class="course-card"><div class="course-num">04</div><div class="course-title">为人父母</div><div class="course-sub">亲子关系</div><div class="course-desc">教育的本质是父母的觉醒。帮助父母清理自身情绪创伤，打破代际循环，让亲子关系回归爱与觉知。</div></div>
+    <div class="course-card"><div class="course-num">05</div><div class="course-title">明心见性</div><div class="course-sub">高阶智慧</div><div class="course-desc">探索生命本质，开启内在智慧。适合已完成基础课程的学员，深入心智运作的核心层面。</div></div>
+    <div class="course-card"><div class="course-num">06</div><div class="course-title">永续发展</div><div class="course-sub">生命可持续</div><div class="course-desc">生命的可持续发展——在个人成长的基础上，学习如何将心智智慧融入事业、家庭与社会贡献。</div></div>
   </div>
 </section>
 
@@ -246,7 +375,7 @@ footer strong{color:rgba(201,169,110,0.55)}
   <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:40px;max-width:800px;margin:0 auto">
     <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:2;margin-bottom:20px">心智教育，是研究人类心智运作规律与身心健康的交叉学科。它不治病，但通过改变引发疾病的内在心智模式，让身体自愈成为可能。</p>
     <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:2;margin-bottom:20px">传统医学治标，心智教育治本。当一个人真正理解"我是一切的根源"，并开始在内在下功夫，外在的一切——关系、财富、健康——都会随之改变。</p>
-    <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:2">这不是玄学，而是有大量临床案例支撑的实证学科。包丰源老师用20余年时间，访问了数万名患者与学员，验证了心智模式与身体疾病之间的高度相关性，并在国内外出版了18本专著，惠及数十万学员。</p>
+    <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:2">包丰源老师20余年深耕心智教育，出版<strong>18本专著</strong>，发表<strong>7篇学术论文</strong>，创立<strong>情志疗法</strong>体系，获科学技术成果评价<strong>国际领先水平</strong>。先后创立心智家园文化发展有限公司和广东省心智家园慈善基金会，捐建<strong>9所心智家园小学</strong>，惠及<strong>数十万学员</strong>。以"让生命更有价值"为使命，致力于将东方智慧与西方实证贯通融合，帮助更多人活出生命的本来样子。</p>
   </div>
 </section>
 
@@ -258,277 +387,8 @@ footer strong{color:rgba(201,169,110,0.55)}
 
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
 
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);border-top:4px solid var(--primary);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-        <span style="background:var(--primary);color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">1</span>
-        <span style="font-weight:700;font-size:15px;">核心定义</span>
-      </div>
-      <div style="font-size:13px;color:#555;line-height:1.8;">
-        强烈情绪刺激时，身体感官、主观感受、认知评价<strong>三者同时打包编码</strong>形成的自动反应程序。存储在细胞记忆中，类似计算机的<strong>zip压缩包</strong>。
-      </div>
-      <div style="margin-top:10px;padding:8px 12px;background:rgba(124,92,252,0.06);border-radius:8px;font-size:12px;color:var(--primary);">
-        标签：场景触发 · 反应固化 · 意识不可控 · 跨域影响
-      </div>
-    </div>
-
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);border-top:4px solid var(--accent);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-        <span style="background:var(--accent);color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">2</span>
-        <span style="font-weight:700;font-size:15px;">四要素结构</span>
-      </div>
-      <div style="font-size:13px;color:#555;line-height:1.8;">
-        <strong style="color:var(--primary);">① 事件场景</strong> 时间·地点·人物·环境<br>
-        <strong style="color:var(--accent);">② 身体感受</strong> 心跳·肌肉·呼吸·温度<br>
-        <strong style="color:var(--gold);">③ 情绪能量</strong> 恐惧·愤怒·悲伤·羞愧<br>
-        <strong style="color:var(--teal);">④ 认知结论</strong> "我不够好""世界不安全"
-      </div>
-    </div>
-
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);border-top:4px solid var(--gold);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-        <span style="background:var(--gold);color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">3</span>
-        <span style="font-weight:700;font-size:15px;">形成机制</span>
-      </div>
-      <div style="font-size:13px;color:#555;line-height:2;">
-        <span style="display:inline-block;background:rgba(124,92,252,0.1);padding:2px 8px;border-radius:4px;font-size:12px;">急性事件</span>
-        <span style="color:var(--text-muted);"> → </span>
-        <span style="display:inline-block;background:rgba(255,107,157,0.1);padding:2px 8px;border-radius:4px;font-size:12px;">未完成闭环</span>
-        <span style="color:var(--text-muted);"> → </span>
-        <span style="display:inline-block;background:rgba(245,158,11,0.1);padding:2px 8px;border-radius:4px;font-size:12px;">细胞封装</span>
-        <span style="color:var(--text-muted);"> → </span>
-        <span style="display:inline-block;background:rgba(20,184,166,0.1);padding:2px 8px;border-radius:4px;font-size:12px;">自动触发</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);border-top:4px solid var(--teal);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-        <span style="background:var(--teal);color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">4</span>
-        <span style="font-weight:700;font-size:15px;">影响维度</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px;">
-        <div style="background:rgba(124,92,252,0.06);padding:12px;border-radius:10px;text-align:center;">
-          <div style="font-size:24px;">💼</div><div style="font-weight:700;">事业</div><div style="font-size:11px;color:var(--text-muted);">不敢晋升·害怕表现</div>
-        </div>
-        <div style="background:rgba(255,107,157,0.06);padding:12px;border-radius:10px;text-align:center;">
-          <div style="font-size:24px;">💰</div><div style="font-weight:700;">财富</div><div style="font-size:11px;color:var(--text-muted);">赚钱=痛苦·留不住钱</div>
-        </div>
-        <div style="background:rgba(245,158,11,0.06);padding:12px;border-radius:10px;text-align:center;">
-          <div style="font-size:24px;">💞</div><div style="font-weight:700;">关系</div><div style="font-size:11px;color:var(--text-muted);">害怕亲密·重复被弃</div>
-        </div>
-        <div style="background:rgba(20,184,166,0.06);padding:12px;border-radius:10px;text-align:center;">
-          <div style="font-size:24px;">🏥</div><div style="font-weight:700;">健康</div><div style="font-size:11px;color:var(--text-muted);">情绪积压·身体信号</div>
-        </div>
-      </div>
-    </div>
-
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);border-top:4px solid var(--orange);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-        <span style="background:var(--orange);color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">5</span>
-        <span style="font-weight:700;font-size:15px;">真实案例</span>
-      </div>
-      <div style="font-size:12px;color:#555;line-height:1.7;">
-        <div style="padding:8px 10px;background:rgba(124,92,252,0.04);border-radius:8px;margin-bottom:8px;">
-          <strong style="color:var(--primary);">📌 财富限制型</strong> 42岁男·6岁被误偷暴打→"赚钱=痛苦"→每次有钱就花掉
-        </div>
-        <div style="padding:8px 10px;background:rgba(255,107,157,0.04);border-radius:8px;">
-          <strong style="color:var(--accent);">📌 关系模式型</strong> 36岁女·4岁听母说"不要了"→"我会被抛弃"→三次恋爱均被弃
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#fff;border-radius:16px;padding:28px 32px;border:1px solid rgba(0,0,0,0.06);border-top:4px solid var(--rose);">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-      <span style="background:var(--rose);color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">6</span>
-      <span style="font-weight:700;font-size:15px;">消融方法 · 四步程序</span>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
-      <div style="text-align:center;padding:16px 8px;background:linear-gradient(180deg,rgba(124,92,252,0.08),transparent);border-radius:12px;">
-        <div style="background:var(--primary);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;margin:0 auto 8px;">①</div>
-        <div style="font-weight:700;font-size:14px;">回溯唤醒</div>
-        <div style="font-size:11px;color:var(--text-muted);">回到最初时刻</div>
-      </div>
-      <div style="text-align:center;padding:16px 8px;background:linear-gradient(180deg,rgba(255,107,157,0.08),transparent);border-radius:12px;">
-        <div style="background:var(--accent);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;margin:0 auto 8px;">②</div>
-        <div style="font-weight:700;font-size:14px;">情绪释放</div>
-        <div style="font-size:11px;color:var(--text-muted);">呼吸引导流动</div>
-      </div>
-      <div style="text-align:center;padding:16px 8px;background:linear-gradient(180deg,rgba(245,158,11,0.08),transparent);border-radius:12px;">
-        <div style="background:var(--gold);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;margin:0 auto 8px;">③</div>
-        <div style="font-weight:700;font-size:14px;">认知重建</div>
-        <div style="font-size:11px;color:var(--text-muted);">成人视角重解读</div>
-      </div>
-      <div style="text-align:center;padding:16px 8px;background:linear-gradient(180deg,rgba(20,184,166,0.08),transparent);border-radius:12px;">
-        <div style="background:var(--teal);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;margin:0 auto 8px;">④</div>
-        <div style="font-weight:700;font-size:14px;">程序更新</div>
-        <div style="font-size:11px;color:var(--text-muted);">新神经通路建立</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════════════════════════════ -->
-<!-- 高密度信息图 2：心智需求六大模型            -->
-<!-- 风格：复古波普网格                          -->
-<!-- ══════════════════════════════════════════ -->
-<section class="section" id="infographic-needs" style="max-width:1100px;margin:0 auto;padding:64px 24px;">
-  <div class="section-tag">高密度信息图 · ②</div>
-  <h2 class="section-title">心智需求六大模型 · 行为的底层代码</h2>
-  <p class="section-sub">每个行为背后都有一个未被满足的心智需求——找到它，就找到了打开文件包的钥匙</p>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px;">
-    <div style="background:#fff;border-radius:16px;padding:24px;text-align:center;border:2px solid transparent;transition:all 0.25s;" onmouseover="this.style.borderColor='#7c5cfc'" onmouseout="this.style.borderColor='transparent'">
-      <div style="font-size:40px;margin-bottom:8px;">🛡️</div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:4px;color:var(--primary);">安全感</div>
-      <div style="font-size:12px;color:var(--text-muted);line-height:1.7;">需要被保护、生存无虞<br><strong style="color:var(--rose);">文件包效应：</strong>焦虑·过度控制·不敢冒险</div>
-      <div style="margin-top:8px;font-size:11px;background:rgba(124,92,252,0.06);padding:6px;border-radius:6px;color:var(--text-muted);">起源：0-3岁依恋期 · 与母亲的情感连接</div>
-    </div>
-    <div style="background:#fff;border-radius:16px;padding:24px;text-align:center;border:2px solid transparent;transition:all 0.25s;" onmouseover="this.style.borderColor='#ff6b9d'" onmouseout="this.style.borderColor='transparent'">
-      <div style="font-size:40px;margin-bottom:8px;">❤️</div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:4px;color:var(--accent);">被爱感</div>
-      <div style="font-size:12px;color:var(--text-muted);line-height:1.7;">需要无条件接纳<br><strong style="color:var(--rose);">文件包效应：</strong>讨好·害怕拒绝·过度索取关注</div>
-      <div style="margin-top:8px;font-size:11px;background:rgba(255,107,157,0.06);padding:6px;border-radius:6px;color:var(--text-muted);">起源：被抛弃经历 · "我不值得被爱"信念</div>
-    </div>
-    <div style="background:#fff;border-radius:16px;padding:24px;text-align:center;border:2px solid transparent;transition:all 0.25s;" onmouseover="this.style.borderColor='#f59e0b'" onmouseout="this.style.borderColor='transparent'">
-      <div style="font-size:40px;margin-bottom:8px;">👑</div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:4px;color:var(--gold);">价值感</div>
-      <div style="font-size:12px;color:var(--text-muted);line-height:1.7;">需要被认可和重视<br><strong style="color:var(--rose);">文件包效应：</strong>完美主义·自我否定·证明型驱动</div>
-      <div style="margin-top:8px;font-size:11px;background:rgba(245,158,11,0.06);padding:6px;border-radius:6px;color:var(--text-muted);">起源：被比较 · 被否定表现 · "不够好"</div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;">
-    <div style="background:#fff;border-radius:16px;padding:24px;text-align:center;border:2px solid transparent;transition:all 0.25s;" onmouseover="this.style.borderColor='#14b8a6'" onmouseout="this.style.borderColor='transparent'">
-      <div style="font-size:40px;margin-bottom:8px;">🎯</div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:4px;color:var(--teal);">掌控感</div>
-      <div style="font-size:12px;color:var(--text-muted);line-height:1.7;">需要可预测和可控<br><strong style="color:var(--rose);">文件包效应：</strong>控制欲强·无法放手·决策恐惧</div>
-      <div style="margin-top:8px;font-size:11px;background:rgba(20,184,166,0.06);padding:6px;border-radius:6px;color:var(--text-muted);">起源：失控经历 · 重大变故 · 被支配</div>
-    </div>
-    <div style="background:#fff;border-radius:16px;padding:24px;text-align:center;border:2px solid transparent;transition:all 0.25s;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='transparent'">
-      <div style="font-size:40px;margin-bottom:8px;">🤝</div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:4px;color:var(--orange);">归属感</div>
-      <div style="font-size:12px;color:var(--text-muted);line-height:1.7;">需要被群体接纳<br><strong style="color:var(--rose);">文件包效应：</strong>社交焦虑·无法融入·习惯性独处</div>
-      <div style="margin-top:8px;font-size:11px;background:rgba(249,115,22,0.06);padding:6px;border-radius:6px;color:var(--text-muted);">起源：被排斥·被孤立·转学/搬家经历</div>
-    </div>
-    <div style="background:#fff;border-radius:16px;padding:24px;text-align:center;border:2px solid transparent;transition:all 0.25s;" onmouseover="this.style.borderColor='#f43f5e'" onmouseout="this.style.borderColor='transparent'">
-      <div style="font-size:40px;margin-bottom:8px;">🌱</div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:4px;color:var(--rose);">成长感</div>
-      <div style="font-size:12px;color:var(--text-muted);line-height:1.7;">需要进步和超越<br><strong style="color:var(--rose);">文件包效应：</strong>停滞感·空虚·方向迷失</div>
-      <div style="margin-top:8px;font-size:11px;background:rgba(244,63,94,0.06);padding:6px;border-radius:6px;color:var(--text-muted);">起源：被否定潜能·"你没出息"·发展受阻</div>
-    </div>
-  </div>
-
-  <div style="background:linear-gradient(135deg,rgba(124,92,252,0.06),rgba(255,107,157,0.06));border-radius:16px;padding:28px 32px;border:1px solid rgba(124,92,252,0.12);">
-    <div style="font-weight:800;font-size:16px;margin-bottom:12px;color:var(--primary-dark);">📊 需求满足度自检</div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;font-size:11px;text-align:center;">
-      <div><div style="height:8px;background:#e5e7eb;border-radius:4px;margin-bottom:4px;"><div style="height:100%;width:0%;background:var(--primary);border-radius:4px;"></div></div>安全感</div>
-      <div><div style="height:8px;background:#e5e7eb;border-radius:4px;margin-bottom:4px;"><div style="height:100%;width:0%;background:var(--accent);border-radius:4px;"></div></div>被爱感</div>
-      <div><div style="height:8px;background:#e5e7eb;border-radius:4px;margin-bottom:4px;"><div style="height:100%;width:0%;background:var(--gold);border-radius:4px;"></div></div>价值感</div>
-      <div><div style="height:8px;background:#e5e7eb;border-radius:4px;margin-bottom:4px;"><div style="height:100%;width:0%;background:var(--teal);border-radius:4px;"></div></div>掌控感</div>
-      <div><div style="height:8px;background:#e5e7eb;border-radius:4px;margin-bottom:4px;"><div style="height:100%;width:0%;background:var(--orange);border-radius:4px;"></div></div>归属感</div>
-      <div><div style="height:8px;background:#e5e7eb;border-radius:4px;margin-bottom:4px;"><div style="height:100%;width:0%;background:var(--rose);border-radius:4px;"></div></div>成长感</div>
-    </div>
-    <div style="font-size:12px;color:var(--text-muted);margin-top:12px;text-align:center;">💡 需求是能量流动的方向，文件包是能量堵塞的位置</div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════════════════════════════ -->
-<!-- 高密度信息图 3：情志疗法全景图              -->
-<!-- 风格：坐标蓝图                              -->
-<!-- ══════════════════════════════════════════ -->
-<section class="section" id="infographic-qz" style="max-width:1100px;margin:0 auto;padding:64px 24px;">
-  <div class="section-tag">高密度信息图 · ③</div>
-  <h2 class="section-title">情志疗法全景图 · 非药物疗法体系</h2>
-  <p class="section-sub">从操作标准到临床应用、从科研到国际化的完整图谱</p>
-
-  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;margin-bottom:16px;">
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);">
-      <div style="font-weight:700;font-size:15px;margin-bottom:12px;">📋 已发布团体标准</div>
-      <div style="font-size:13px;color:#555;line-height:2;">
-        <span style="display:inline-block;padding:2px 10px;background:var(--primary);color:#fff;border-radius:100px;font-size:11px;margin-right:6px;">✓</span> 《情志疗法操作规范》<br>
-        <span style="display:inline-block;padding:2px 10px;background:var(--primary);color:#fff;border-radius:100px;font-size:11px;margin-right:6px;">✓</span> 《乳腺增生调理》团体标准<br>
-        <span style="display:inline-block;padding:2px 10px;background:var(--primary);color:#fff;border-radius:100px;font-size:11px;margin-right:6px;">✓</span> 《抑郁症调理》团体标准<br>
-        <span style="display:inline-block;padding:2px 10px;background:var(--gold);color:#fff;border-radius:100px;font-size:11px;margin-right:6px;">🏛</span> 国家卫健委结题验收通过
-      </div>
-    </div>
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);">
-      <div style="font-weight:700;font-size:15px;margin-bottom:12px;">🏆 科研成果</div>
-      <div style="font-size:13px;color:#555;line-height:2;">
-        • 科技进步三等奖（2023）<br>
-        • 多篇论文获一等奖<br>
-        • SCI/EI期刊发表<br>
-        • 科技成果登记
-      </div>
-    </div>
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);">
-      <div style="font-weight:700;font-size:15px;margin-bottom:12px;">🌏 国际影响</div>
-      <div style="font-size:13px;color:#555;line-height:2;">
-        • 美国研究中心成立<br>
-        • 美国工作坊授课<br>
-        • 世界中医药大会发言<br>
-        • 世界心身医学大会
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);">
-      <div style="font-weight:700;font-size:15px;margin-bottom:12px;">❤️ 情绪-疾病对应关系</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
-        <div style="padding:8px 10px;background:rgba(244,63,94,0.06);border-radius:8px;"><strong style="color:var(--rose);">委屈·怨怒</strong><br>→ 乳腺问题</div>
-        <div style="padding:8px 10px;background:rgba(124,92,252,0.06);border-radius:8px;"><strong style="color:var(--primary);">被伤害·两性创伤</strong><br>→ 子宫问题</div>
-        <div style="padding:8px 10px;background:rgba(255,107,157,0.06);border-radius:8px;"><strong style="color:var(--accent);">憋屈·说不出口</strong><br>→ 甲状腺结节</div>
-        <div style="padding:8px 10px;background:rgba(245,158,11,0.06);border-radius:8px;"><strong style="color:var(--gold);">长期压抑</strong><br>→ 抑郁·焦虑</div>
-        <div style="padding:8px 10px;background:rgba(20,184,166,0.06);border-radius:8px;"><strong style="color:var(--teal);">恐惧·担忧</strong><br>→ 失眠</div>
-        <div style="padding:8px 10px;background:rgba(249,115,22,0.06);border-radius:8px;"><strong style="color:var(--orange);">承担过多</strong><br>→ 颈椎问题</div>
-      </div>
-    </div>
-    <div style="background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);">
-      <div style="font-weight:700;font-size:15px;margin-bottom:12px;">📅 发展里程碑</div>
-      <div style="font-size:13px;color:#555;line-height:2.2;">
-        <span style="color:var(--primary);font-weight:700;">2015</span> → 理念提出<br>
-        <span style="color:var(--accent);font-weight:700;">2020</span> → 团体标准立项<br>
-        <span style="color:var(--gold);font-weight:700;">2023</span> → 科技进步奖<br>
-        <span style="color:var(--teal);font-weight:700;">2025</span> → 新作出版·国际拓展<br>
-        <span style="color:var(--rose);font-weight:700;">2026</span> → 体系成熟·科普基地
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#fff;border-radius:16px;padding:28px 32px;border:1px solid rgba(0,0,0,0.06);">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-      <span style="font-size:28px;">🤖</span>
-      <span style="font-weight:700;font-size:15px;">AI时代的情志疗法 · 新探索</span>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;font-size:12px;">
-      <div style="padding:12px;background:rgba(124,92,252,0.04);border-radius:10px;text-align:center;">
-        <div style="font-size:20px;margin-bottom:4px;">🧠</div>
-        <strong>AI问诊辅助</strong><br>情绪模式识别
-      </div>
-      <div style="padding:12px;background:rgba(255,107,157,0.04);border-radius:10px;text-align:center;">
-        <div style="font-size:20px;margin-bottom:4px;">📊</div>
-        <strong>数据分析</strong><br>案例效果量化
-      </div>
-      <div style="padding:12px;background:rgba(245,158,11,0.04);border-radius:10px;text-align:center;">
-        <div style="font-size:20px;margin-bottom:4px;">📚</div>
-        <strong>知识库蒸馏</strong><br>4326篇文献萃取
-      </div>
-      <div style="padding:12px;background:rgba(20,184,166,0.04);border-radius:10px;text-align:center;">
-        <div style="font-size:20px;margin-bottom:4px;">🌐</div>
-        <strong>在线课程</strong><br>规模化传播
-      </div>
-    </div>
-  </div>
-</section>
-
 <footer>
-  <p>心智教育知识体系 &nbsp;|&nbsp; 基于包丰源老师18年研究与实践 &nbsp;|&nbsp; <strong>道虾整理</strong>
+  <p>心智教育知识体系 &nbsp;|&nbsp; 基于包丰源老师20余年研究与实践 &nbsp;|&nbsp; <strong>道虾整理</strong>
 <script>
 function openLightbox(src, caption){
   var lb = document.getElementById('lightbox');
